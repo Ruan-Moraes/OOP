@@ -1,4 +1,4 @@
-package Aula06;
+package aula06;
 
 public class ControleRemoto implements Controlador {
     private int volume;
