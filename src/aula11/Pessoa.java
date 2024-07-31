@@ -1,18 +1,21 @@
-package aula010;
+package aula11;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private int idade;
     private String sexo;
 
-    public Pessoa(String nome, int idade, String sexo) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sexo = sexo;
-    }
-
     public void fazerAniversario() {
         this.setIdade(this.getIdade() + 1);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", sexo='" + sexo + '\'' +
+                '}';
     }
 
     public String getNome() {
@@ -37,14 +40,5 @@ public class Pessoa {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
-    }
-
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", sexo='" + sexo + '\'' +
-                '}';
     }
 }
