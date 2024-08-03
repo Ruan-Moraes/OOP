@@ -1,18 +1,19 @@
-package aula09;
+package aula14;
 
 public class Pessoa {
-    private String nome;
-    private int idade;
-    private String sexo;
+    protected String nome;
+    protected int idade;
+    protected String sexo;
+    protected int experiencia;
 
     public Pessoa(String nome, int idade, String sexo) {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
+        this.experiencia = 0;
     }
 
-    public void fazerAniversario() {
-        this.setIdade(this.getIdade() + 1);
+    protected void ganharExp() {
     }
 
     public String getNome() {
@@ -37,5 +38,13 @@ public class Pessoa {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public int getExperiencia() {
+        return experiencia;
+    }
+
+    public void setExperiencia(int experiencia) {
+        this.experiencia = experiencia;
     }
 }
